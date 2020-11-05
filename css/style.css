@@ -1,0 +1,53 @@
+body{
+  background-color: rgb(86, 133, 76);
+}
+/*  NOTE utility class */
+.icon_dimesion {
+  height: 4rem;
+  width: 4rem;
+}
+.d_flex {
+  display: flex;
+}
+.bg_black {
+  background-color: black;
+}
+/* /utility class */
+/* aside navbar */
+ .nav_aside {
+   flex-direction: column;
+   width: 200px;
+   height: 100%;
+   padding: 1.5rem;
+   color: white;
+ }
+ .aside_img {
+   display: block;
+ }
+.playlist_ul {
+  min-height: 100px;
+  overflow-y: hidden;
+}
+/* aside navbar */
+/* main */
+.main_sections {
+width: calc(100% - 200px);
+}
+.upgrade_banner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100px;
+  width: calc(100% - 200px);
+  background-color: rgb(108, 212, 212);
+}
+/* /main */
+/* footer */
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(32, 127, 214)
+}
