@@ -27,6 +27,10 @@ body{
 .text_g {
   color: rgb(79, 79, 79);
 }
+.img_cover_size {
+  height: 220px;
+  width: 220px;
+}
 /* /utility class */
 /* aside navbar */
  .nav_aside {
@@ -60,7 +64,7 @@ main {
 .upgrade_banner {
   height: 150px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .upgrade_banner {
   justify-content: flex-end;
@@ -81,6 +85,14 @@ main {
 .albums_cover {
   border-left-color: rgb(20, 26, 34);
   overflow-x: auto;
+}
+/* thumbnails */
+.cover_thumbnail {
+  margin: 0.5rem;
+  background-color: inherit;
+  text-align: center;
+  flex-basis: calc(100% / 6);
+  border: 0;
 }
 /* /main */
 /* footer */
