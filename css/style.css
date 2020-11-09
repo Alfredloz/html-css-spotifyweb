@@ -142,10 +142,33 @@ footer {
   display: block;
 }
 /* /artist footer */
-.time_bar {
-  background-color: yellow;
-  width: 50rem;
-  height: 2px;
-  vertical-align: middle;
+/* player footer */
+.bottons_player {
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+.bottons_player span {
+  padding: 0 2rem;
   align-self: center;
+}
+.bottons_player span i.far{
+  font-size: 3rem;
+}
+.time_lapse {
+  align-items: center;
+}
+.time_bar {
+  background-color: rgb(112, 112, 112);
+  width: 50rem;
+  height: 5px;
+  margin: 0 01rem;
+  border-radius: 3px;
+  align-self: center;
+}
+.timer {
+  background: lightgrey;
+  width: 20rem;
+  height: 5px;
+  border-radius: 3px;
 }
