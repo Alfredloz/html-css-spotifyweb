@@ -27,35 +27,14 @@ body{
 .text_g {
   color: rgb(112, 112, 112);
 }
+.bg_green {
+  background-color: rgb(154, 226, 47);
+}
 .img_cover_size {
   min-height: 200px;
   min-width: 200px;
 }
 /* /utility class */
-//* WARNING: WEBKIT settings */
-input[type=range] {
-  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-  width: 100%; /* Specific width is required for Firefox. */
-  background: transparent; /* Otherwise white in Chrome */
-}
-
-input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-
-input[type=range]:focus {
-  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
-}
-
-input[type=range]::-ms-track {
-  width: 100%;
-  cursor: pointer;
-
-  /* Hides the slider so custom styles can be added */
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
 /* aside navbar */
  .nav_aside {
    flex-direction: column;
@@ -118,16 +97,40 @@ main {
 }
 /* /upgrade banner */
 /* albums covers */
+/* catetegories selections */
+.underline_green {
+  position: relative;
+}
+.underline_green::after {
+  content: '';
+  height: 2px;
+  width: 30%;
+  background-color: rgb(154, 226, 47);
+  position: absolute;
+  left:calc(50% - 10%);
+  bottom:-5px;
+  opacity: 0;
+}
+.underline_green:hover:after {
+  opacity: 1;
+}
+/* /categories selections */
 .music_sections {
   margin: 0 20%;
   justify-content: center;
   justify-content: space-around;
+}
+.music_sections a {
+  text-decoration: none;
 }
 .albums_cover {
   border-left-color: rgb(20, 26, 34);
   overflow-x: auto;
 }
 /* thumbnails */
+.albums_area h3, .albums_area p {
+  margin-left: 1rem;
+}
 .cover_thumbnail {
   margin: 0.5rem;
   background-color: inherit;
@@ -145,6 +148,7 @@ footer {
   width: 100%;
   height: 90px;
   background-color: rgb(40, 40, 40);
+  overflow: hidden;
 }
 /* artist footer */
 .aritst_info {
@@ -162,8 +166,15 @@ footer {
   padding: 0 1rem;
   font-size: 1.5rem;
 }
+.bottonsleft_footer:hover {
+  color: white;
+}
 .name_song span {
   display: block;
+}
+.name_song span:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 /* /artist footer */
 /* player footer */
@@ -179,12 +190,18 @@ footer {
 .bottons_player span i.far{
   font-size: 3rem;
 }
+.bottons_player span:hover {
+  color: white;
+}
+.bottons_player .fa-play-circle:hover {
+  transform: scale(1.3);
+}
 .time_lapse {
   align-items: center;
 }
 .time_bar {
   align-self: center;
-  width: 50rem;
+  width: 100%;
   margin: 0 01rem;
   border-radius: 3px;
   height: 5px;
@@ -192,9 +209,12 @@ footer {
 }
 .timer {
   background: lightgrey;
-  width: 20rem;
+  width: 30%;
   height: 5px;
   border-radius: 3px;
+}
+.timer:hover {
+  background: rgb(154, 226, 47);
 }
 .volume_footer {
   margin: 0 01rem;
@@ -209,3 +229,19 @@ footer {
   border-radius: 3px;
   background: lightgrey;
 }
+.volume_range:hover {
+  background-color: rgb(154, 226, 47);
+}
+/* /player footer */
+/* control panel footer */
+.control_panel {
+  align-items: center;
+}
+.control_panel span {
+  padding: 0 0.8rem;
+  font-size: 1.5rem;
+}
+.control_panel span:hover {
+  color: white;
+}
+/* /footer */
