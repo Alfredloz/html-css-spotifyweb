@@ -32,6 +32,30 @@ body{
   min-width: 200px;
 }
 /* /utility class */
+//* WARNING: WEBKIT settings */
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
 /* aside navbar */
  .nav_aside {
    flex-direction: column;
@@ -159,16 +183,29 @@ footer {
   align-items: center;
 }
 .time_bar {
-  background-color: rgb(112, 112, 112);
+  align-self: center;
   width: 50rem;
-  height: 5px;
   margin: 0 01rem;
   border-radius: 3px;
-  align-self: center;
+  height: 5px;
+  background-color: rgb(112, 112, 112);
 }
 .timer {
   background: lightgrey;
   width: 20rem;
   height: 5px;
   border-radius: 3px;
+}
+.volume_footer {
+  margin: 0 01rem;
+  border-radius: 3px;
+  width: 15rem;
+  height: 5px;
+  background-color: rgb(112, 112, 112);
+}
+.volume_range {
+  width: 20%;
+  height: 5px;
+  border-radius: 3px;
+  background: lightgrey;
 }
