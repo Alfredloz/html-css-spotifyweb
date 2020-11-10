@@ -171,19 +171,44 @@ main {
 }
 /* /categories selections */
 /* thumbnails */
-/* NOTE: impostando nella @media query una width fissa si può ottenere l'effetto di 2 pr riga */
 .albums_area h3, .albums_area p {
   margin-left: 1rem;
 }
 .cover_thumbnail {
+  position: relative;
   margin: 1rem;
   background-color: inherit;
   text-align: center;
   flex-basis: calc(100% / 7);
   border: 0;
 }
-
+.play_icon {
+  position: absolute;
+  width: 97%;
+  height: 170px;
+  top: 1.5%;
+  left: 1%;
+  font-size: 6rem;
+}
+.play_icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.cover_thumbnail .play_icon:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.cover_thumbnail .play_icon i:hover {
+  opacity: 1;
+  cursor: pointer;
+}
 .albums_cover .albums_area:nth-child(6) .cover_thumbnail img {
+  border-radius: 50%;
+}
+.albums_cover .albums_area:nth-child(6) .cover_thumbnail .play_icon {
   border-radius: 50%;
 }
 /* /main */
@@ -364,7 +389,7 @@ footer {
     height: auto;
   }
   .name_song {
-    font-size: 1rem;s
+    font-size: 1.2rem;
   }
   .player_footer {
     width: 20rem;
