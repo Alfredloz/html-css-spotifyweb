@@ -34,8 +34,8 @@ body{
   background-color: rgb(154, 226, 47);
 }
 .img_cover_size {
-  min-height: 200px;
-  min-width: 200px;
+  min-height: 17rem;
+  min-width: 17rem;
 }
 /* /utility class */
 /* aside navbar */
@@ -176,12 +176,13 @@ main {
   margin-left: 1rem;
 }
 .cover_thumbnail {
-  margin: 0.5rem;
+  margin: 1rem;
   background-color: inherit;
   text-align: center;
   flex-basis: calc(100% / 7);
   border: 0;
 }
+
 .albums_cover .albums_area:nth-child(6) .cover_thumbnail img {
   border-radius: 50%;
 }
@@ -195,15 +196,15 @@ footer {
   overflow-x: hidden;
 }
 /* artist footer */
-.aritst_info {
+.artist_info {
   align-items: center;
 }
-.aritst_info img {
+.artist_info img {
   margin: 2rem;
-  height: 5rem;
+  height: auto;
   width: 5rem;
 }
-.aritst_info span.bottonsleft_footer:nth-last-child(2) {
+.artist_info span.bottonsleft_footer:nth-last-child(2) {
   margin-left: 4rem;
 }
 .bottonsleft_footer {
@@ -290,6 +291,32 @@ footer {
 }
 /* /footer */
 /* WARNING: MEDIA query */
+@media all and (max-width: 992px) {
+  /* footer */
+  .preference_footer {
+    flex-direction: column;
+  }
+  .artist_info .preference_footer span.bottonsleft_footer {
+    margin-left: 0;
+  }
+  .time_bar {
+    width: 20rem;
+  }
+  .control_panel span {
+    padding: 0.1rem;
+  }
+  .time_lapse {
+    margin: 0 5%;
+  }
+  .volume_footer {
+    width: 8rem;
+  }
+  .bottons_player {
+    width: 30rem;
+    justify-content: center;
+  }
+  /* /footer */
+}
 @media all and (max-width: 768px) {
   /* navbar */
   .nav_aside {
@@ -326,7 +353,35 @@ footer {
     display: none;
   }
   /* /navbar */
+  /* main */
   .main_sections {
     width: calc(100% - 60px);
   }
+  /* /main */
+  /* footer */
+  .artist_info img {
+    width: 3rem;
+    height: auto;
+  }
+  .name_song {
+    font-size: 1rem;s
+  }
+  .player_footer {
+    width: 20rem;
+    height: auto;
+  }
+  .bottons_player {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .bottons_player span {
+    padding: 0 0.8rem;
+  }
+  .time_lapse {
+    justify-content: center;
+  }
+  .time_bar {
+    width: 12rem;
+  }
+  /* /footer */
 }
