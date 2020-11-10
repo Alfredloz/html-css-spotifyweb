@@ -42,6 +42,12 @@ body{
 .nav_menu img {
   margin: 0.2rem;
 }
+.icon_aside img:hover {
+  filter: brightness(5);
+  color: white;
+  cursor: pointer;
+  transform: scale(1.2);
+}
 .nav_menu .big_logo {
   width: 12rem;
   padding-bottom: 0.5rem;
@@ -70,6 +76,11 @@ body{
  .aside_img {
    display: block;
  }
+ .creation_playlist span:hover, .creation_playlist span i:hover {
+  color: white;
+  cursor: pointer;
+  transform: scale(1.1);
+ }
 .playlist_ul {
   height: 200px;
   overflow-y: auto;
@@ -77,6 +88,14 @@ body{
   padding-left: 0;
   padding-top: 1rem;
   line-height: 2.3rem;
+}
+.playlist_ul li {
+  width: 50%;
+}
+.playlist_ul li:hover {
+  color: white;
+  cursor: pointer;
+  text-decoration: underline;
 }
 .nav_aside span.text_w > i {
   font-size: 3rem;
@@ -89,6 +108,15 @@ body{
 }
 .user_account span:nth-child(2) {
   display: none;
+}
+.user_account img {
+  display: inline-block;
+}
+.user_account span:hover, .user_account img:hover {
+  filter: brightness(5);
+  color: white;
+  cursor: pointer;
+  transform: scale(1.2);
 }
 /* /aside navbar */
 /* main */
@@ -171,19 +199,48 @@ main {
 }
 /* /categories selections */
 /* thumbnails */
-/* NOTE: impostando nella @media query una width fissa si può ottenere l'effetto di 2 pr riga */
 .albums_area h3, .albums_area p {
   margin-left: 1rem;
 }
 .cover_thumbnail {
+  position: relative;
   margin: 1rem;
   background-color: inherit;
   text-align: center;
   flex-basis: calc(100% / 7);
   border: 0;
 }
-
+.play_icon {
+  position: absolute;
+  width: 97%;
+  height: 170px;
+  top: 1.5%;
+  left: 1%;
+  font-size: 6rem;
+}
+.play_icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.cover_thumbnail .play_icon:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.cover_thumbnail .play_icon i:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.cover_thumbnail h4:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .albums_cover .albums_area:nth-child(6) .cover_thumbnail img {
+  border-radius: 50%;
+}
+.albums_cover .albums_area:nth-child(6) .cover_thumbnail .play_icon {
   border-radius: 50%;
 }
 /* /main */
@@ -364,7 +421,7 @@ footer {
     height: auto;
   }
   .name_song {
-    font-size: 1rem;s
+    font-size: 1.2rem;
   }
   .player_footer {
     width: 20rem;
